@@ -51,6 +51,10 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+    			<groupId>io.swagger.parser.v3</groupId>
+    		<artifactId>swagger-parser</artifactId>
+</dependency>
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
@@ -77,6 +81,27 @@
 						</exclude>
 					</excludes>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.openapitools</groupId>
+				    <artifactId>openapi-generator-maven-plugin</artifactId>
+				    <!-- RELEASE_VERSION -->
+				    <version>6.0.0</version>
+				    <!-- /RELEASE_VERSION -->
+				    <executions>
+					<execution>
+					    <goals>
+						<goal>generate</goal>
+					    </goals>
+					    <configuration>
+						<inputSpec>${project.basedir}/src/main/resources/api.yaml</inputSpec>
+						<generatorName>java</generatorName>
+						<configOptions>
+						   <sourceFolder>src/gen/java/main</sourceFolder>
+						</configOptions>
+					    </configuration>
+					</execution>
+				    </executions>
 			</plugin>
 		</plugins>
 	</build>
