@@ -8,107 +8,37 @@
 		<version>2.7.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>bac.bel</groupId>
-	<artifactId>demo</artifactId>
+	<groupId>com.example</groupId>
+	<artifactId>mvnprg</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>mvnprg</name>
+	<description>Demo project for Maven</description>
 	<properties>
-		<java.version>11</java.version>
-		<spring-cloud-azure.version>4.4.0</spring-cloud-azure.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>com.azure.spring</groupId>
-			<artifactId>spring-cloud-azure-starter-keyvault</artifactId>
-		</dependency>
 
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		
-	
-		<dependency>
-		    <groupId>io.swagger.parser.v3</groupId>
-		    <artifactId>swagger-parser</artifactId>
-		</dependency>
 	</dependencies>
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>com.azure.spring</groupId>
-				<artifactId>spring-cloud-azure-dependencies</artifactId>
-				<version>${spring-cloud-azure.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-				</configuration>
 			</plugin>
-			
-			
-			<plugin>
-			    <groupId>org.openapitools</groupId>
-			    <artifactId>openapi-generator-maven-plugin</artifactId>
-			    <!-- RELEASE_VERSION -->
-			    <version>6.0.0</version>
-			    <!-- /RELEASE_VERSION -->
-			    <executions>
-				<execution>
-				    <goals>
-					<goal>generate</goal>
-				    </goals>
-				    <configuration>
-					<inputSpec>${project.basedir}/src/main/resources/api.yaml</inputSpec>
-					<generatorName>java</generatorName>
-					<configOptions>
-					   <sourceFolder>src/gen/java/main</sourceFolder>
-					</configOptions>
-				    </configuration>
-				</execution>
-			    </executions>
-			</plugin>
-			
-			
 		</plugins>
 	</build>
 
