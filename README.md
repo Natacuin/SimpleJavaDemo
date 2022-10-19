@@ -1,6 +1,6 @@
 # SimpleJavaDemo
 Java project
-
+This project is a simple Java Application to use in demos, upskilling programs, training, etc. In this particular project you will find different setup project in each branch.
 
 ## Branch feature/springdoc-swagger-ui
 In that branch you will find the same code as feature/open-api-generator, but with the **springdoc** dependency, that automaticly creates Swagger UI from the clases in the project that has *@RestController* anotation.
@@ -8,7 +8,7 @@ In that branch you will find the same code as feature/open-api-generator, but wi
 ### Springdoc dependency
 In the pom file the dependency is add as:
 
-```
+``` XML
 <dependency>
   <groupId>org.springdoc</groupId>
 	<artifactId>springdoc-openapi-ui</artifactId>
