@@ -8,3 +8,11 @@ server:
 #   endpoint:
 #      health:
 #        show-details: always
+
+
+logging:
+    io:
+      swagger:
+        models:
+          parameters:
+            AbstractSerializableParameter: error
