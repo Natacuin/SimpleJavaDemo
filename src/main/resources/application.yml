@@ -10,9 +10,9 @@ server:
 #        show-details: always
 
 
-logging:
-    io:
-      swagger:
-        models:
-          parameters:
-            AbstractSerializableParameter: error
+#logging:
+#    io:
+#      swagger:
+#        models:
+#          parameters:
+#            AbstractSerializableParameter: error

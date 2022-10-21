@@ -10,10 +10,10 @@
 //@RestController
 //public class AccountController implements AccountApi {
 //
-//	@Override
-//	public ResponseEntity<AccountDetailResponse> getAccountByAccountNumber(Long accountNumber) {
-//		AccountDetailResponse account = new AccountDetailResponse();
-//		return ResponseEntity.ok(account);
-//	}
+////	@Override
+////	public ResponseEntity<AccountDetailResponse> getAccountByAccountNumber(Long accountNumber) {
+////		AccountDetailResponse account = new AccountDetailResponse();
+////		return ResponseEntity.ok(account);
+////	}
 //	
 //}
